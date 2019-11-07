@@ -155,10 +155,12 @@ status:
 commit:
 	git commit -am "$(call args,Automated lazy commit message without details, read the code change)"  && git push
 
-
+test: testmetric testsimpleOK testsimpleNOTOK 
+	echo
 testmetric:
 	cargo run --example metric  -- 1
-
-testsimple:
-	cargo run --example simple  -- haaa
+testsimpleOK:
 	cargo run --example simple  -- itsfine
+testsimpleNOTOK:
+	cargo run --example simple  -- haaa
+
