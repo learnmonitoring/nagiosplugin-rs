@@ -1,0 +1,35 @@
+.
+├── Cargo.lock
+├── Cargo.toml
+├── examples
+│   ├── Makefile
+│   ├── metric.rs
+│   └── simple.rs
+├── LICENSE-APACHE
+├── LICENSE-MIT
+├── #Makefile#
+├── Makefile
+├── profile_projects-dir-layout.txt
+├── README.md
+├── src
+│   ├── helper.rs
+│   ├── lib.rs
+│   ├── macros.rs
+│   └── Makefile
+└── target
+    └── debug
+        ├── build
+        ├── deps
+        │   ├── libnagiosplugin-39f4fae428b72ee3.rlib
+        │   └── nagiosplugin-39f4fae428b72ee3.d
+        ├── examples
+        │   ├── simple
+        │   ├── simple-6c20a2cc149df291
+        │   ├── simple-6c20a2cc149df291.d
+        │   └── simple.d
+        ├── incremental
+        │   ├── nagiosplugin-e3o0uvhxrt89
+        │   └── simple-2iumbq8c5dxcw
+        └── native
+
+11 directories, 21 files
