@@ -2,7 +2,7 @@ use std::env::args;
 
 use nagiosplugin::{Resource, SimpleMetric, State};
 
-// Usage: cargo run --example simple -- <value>
+// Usage: cargo run --example metric -- <value>
 
 fn main() {
     // Grab the first argument
