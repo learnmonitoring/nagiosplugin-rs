@@ -164,3 +164,8 @@ testsimpleOK:
 testsimpleNOTOK:
 	cargo run --example simple  -- haaa
 
+install-examples:
+	cargo install -v --force --example simple  --path .
+	cargo install -v --force --example metric  --path .
+	ls -lrt ~/.cargo/bin/*
+
