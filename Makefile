@@ -121,15 +121,15 @@ trad: coffee
 #Ref: https://stackoverflow.com/questions/1490949/how-to-write-loop-in-a-makefile
 # MANIFEST  
 SRC1= Makefile README.md Cargo.toml
-SRC2= helper.rs  lib.rs  macros.rs
-SRC3= metric.rs  simple.rs
+#SRC2= helper.rs  lib.rs  macros.rs
+#SRC3= metric.rs  simple.rs
 #SRC2= manage.py profiles_projects-dir-layout.txt
 
 cleantmp:
 	rm -f ${A2PSTMP}/*.ps ${A2PSTMP}/*.pdf	
 ps: cleantmp
 	$(foreach var, $(SRC1), ${A2PS2S1C} $(var) --output=${A2PSTMP}/$(var).ps ;)
-	$(foreach var, $(SRC2), ${A2PS2S1C} $(var) --output=${A2PSTMP}/$(var).ps ;)
+#	$(foreach var, $(SRC2), ${A2PS2S1C} $(var) --output=${A2PSTMP}/$(var).ps ;)
 
 allpdf: pdf
 	make -C src pdf
@@ -137,7 +137,7 @@ allpdf: pdf
 
 pdf: ps
 	$(foreach var, $(SRC1), (cd ${A2PSTMP};ps2pdf $(var).ps $(var).pdf);)
-	$(foreach var, $(SRC2), (cd ${A2PSTMP};ps2pdf $(var).ps $(var).pdf);)
+#	$(foreach var, $(SRC2), (cd ${A2PSTMP};ps2pdf $(var).ps $(var).pdf);)
 	rm -f ${A2PSTMP}/*.ps
 	cp ${A2PSTMP}/*.pdf  ${DOCS}/
 
