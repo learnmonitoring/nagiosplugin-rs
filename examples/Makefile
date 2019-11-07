@@ -80,7 +80,7 @@ unittest:
 
 #Ref: https://stackoverflow.com/questions/1490949/how-to-write-loop-in-a-makefile
 # MANIFEST  
-SRC1=  metric.rs simple.rs
+SRC1=  metric.rs simple.rs simple2.rs
 
 #SRC2= manage.py profiles_projects-dir-layout.txt
 

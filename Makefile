@@ -155,7 +155,7 @@ status:
 commit:
 	git commit -am "$(call args,Automated lazy commit message without details, read the code change)"  && git push
 
-test: testmetric testsimpleOK testsimpleNOTOK 
+test: testmetric testsimpleOK testsimpleNOTOK testsimple2OK testsimple2NOTOK 
 	echo
 testmetric:
 	cargo run --example metric  -- 1
@@ -164,8 +164,14 @@ testsimpleOK:
 testsimpleNOTOK:
 	cargo run --example simple  -- haaa
 
+testsimple2OK:
+	cargo run --example simple2  -- itsfine
+testsimple2NOTOK:
+	cargo run --example simple2  -- haaa
+
 install-examples:
 	cargo install -v --force --example simple  --path .
 	cargo install -v --force --example metric  --path .
+	cargo install -v --force --example simple2 --path .
 	ls -lrt ~/.cargo/bin/*
 
